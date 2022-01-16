@@ -9,21 +9,22 @@ CREATE TABLE vasutallomasok(
 );
 
 CREATE TABLE vasutallomasvonalak(
+  id                         number primary key,
   vasutallomas_id            NUMBER,
   vonal_id                   number
 );
 
 CREATE TABLE vonalak(
   vonalszam            NUMBER PRIMARY KEY,
-  indulo_allomas       NUMBER,
-  veg_allomas          NUMBER,
+  indulo_allomas       varchar2(50),
+  veg_allomas          varchar2(50),
   epitesi_ev           date
 );
 
 Create table allomasfonokok(
   id                   number primary key,
   vasutallomas_id      number,
-  név                  varchar2(50),
+  nev                  varchar2(50),
   kor                  number
 );
 
@@ -37,7 +38,7 @@ Create table epuletek(
 
 Create table biztberek(
   nev                  varchar2(50) primary key,
-  gyarto               varchar2(50)
+  tipus                varchar2(50) not null
 );
 
 
